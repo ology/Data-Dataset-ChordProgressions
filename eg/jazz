@@ -16,7 +16,7 @@ my $scale = shift || 'major'; # or minor
 
 my %data = Data::Dataset::ChordProgressions::as_hash();
 
-my @pool = map { @{ $data{jazz}{$scale}{$_} } } keys %{ $data{jazz}{$scale} };;
+my @pool = map { @{ $data{jazz}{$scale}{$_} } } keys %{ $data{jazz}{$scale} };
 
 my %note_map;
 @note_map{ get_scale_notes('C', $scale) } = get_scale_notes($note, $scale);
