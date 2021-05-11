@@ -56,7 +56,7 @@ for my $i (1 .. $n) {
                 $o--;
                 splice @notes, $i, 1;
             }
-            # Add the bass note and octave to the chord notes
+            # Prepend the bass note and octave to the chord notes
             unshift @notes, $bass . $o;
         }
         @notes = midi_format(@notes);
