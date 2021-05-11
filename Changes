@@ -2,6 +2,7 @@ Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
     - Improve documentation.
+    - Add the eg/jazz program.
 
 0.0101 2021-05-11 03:34:10
     - Replace "Dom7" with "7" in the shared CSV.
