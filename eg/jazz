@@ -28,5 +28,5 @@ warn(__PACKAGE__,' ',__LINE__," MARK: ",ddc(\%note_map));
 for my $i (1 .. $n) {
     my $chord = $pool[int rand @pool];
     (my $named = $chord->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
-    print "$i. $chord->[0] => $named, $chord->[1]\n";
+    print "$i. $named, $chord->[1]\n";
 }
