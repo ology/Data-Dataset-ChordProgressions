@@ -23,7 +23,16 @@ use File::ShareDir qw(dist_dir);
 =head1 DESCRIPTION
 
 C<Data::Dataset::ChordProgressions> provides access to hundreds of
-possible chord progressions in the keys of C<C major> and C<C minor>.
+possible musical chord progressions in five genres: C<blues>,
+C<country>, C<jazz>, C<pop> and C<rock>.  Each has progressions in
+keys of C<C major> and C<C minor>.
+
+Each of these is divided into a C<type> of progression, depending on
+song position.  Take these types with a grain of salt.  They may or
+may not be meaningful...
+
+Each of these is a list of possible chord progressions by named chords
+and by Roman numeral notation.
 
 =cut
 
