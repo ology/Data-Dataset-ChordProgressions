@@ -3,6 +3,7 @@ Revision history for Data-Dataset-ChordProgressions
 {{$NEXT}}
     - Fix typos in the shared CSV.
     - Remove the two instances of the "5 chord".
+    - Add the eg/play-jazz MIDI program.
 
 0.0103 2021-05-11 06:05:39
     - Replace "Aug" with "aug" (augmented) in the shared CSV.
