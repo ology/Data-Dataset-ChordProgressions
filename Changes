@@ -1,6 +1,9 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Improve documentation.
+
+0.0101 2021-05-11 03:34:10
     - Replace "Dom7" with "7" in the shared CSV.
 
 0.0100 2021-05-11 03:19:22
