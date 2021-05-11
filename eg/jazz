@@ -22,8 +22,6 @@ for my $type (keys %{ $data{jazz}{$scale} }) {
 
 my %note_map;
 @note_map{ get_scale_notes('C', $scale) } = get_scale_notes($note, $scale);
-use Data::Dumper::Compact qw(ddc);
-warn(__PACKAGE__,' ',__LINE__," MARK: ",ddc(\%note_map));
 
 for my $i (1 .. $n) {
     my $chord = $pool[int rand @pool];
