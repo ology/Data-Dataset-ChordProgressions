@@ -1,7 +1,8 @@
 #!/usr/bin/env perl
 
 # Return random jazz progressions
-# XXX: A couple chords have a bV note in the base, which is not handled by this code yet...
+
+# Unfortunately, a couple chords have a "bV" note in the base, which is not handled by this code yet...
 
 use strict;
 use warnings;
