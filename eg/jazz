@@ -16,6 +16,7 @@ my $scale = shift || 'major'; # or minor
 
 my %data = Data::Dataset::ChordProgressions::as_hash();
 
+# List of jazz > scale > type chord progressions
 my @pool = map { @{ $data{jazz}{$scale}{$_} } } keys %{ $data{jazz}{$scale} };
 
 my %note_map;
