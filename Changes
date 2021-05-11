@@ -1,4 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
-    - Copied from the Data-Dataset-Classic-Titanic distribution.
+    - Replace "Dom7" with "7" in the shared CSV.
+
+0.0100 2021-05-11 03:19:22
+    - Copy from the Data-Dataset-Classic-Titanic distribution.
