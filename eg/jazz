@@ -1,4 +1,7 @@
 #!/usr/bin/env perl
+
+# Return random jazz progressions
+
 use strict;
 use warnings;
 
