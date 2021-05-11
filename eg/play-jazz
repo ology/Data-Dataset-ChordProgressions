@@ -40,17 +40,23 @@ for my $i (1 .. $n) {
     print "$i. $named, $progression->[1]\n";
     my @chords = split /-/, $named;
     for my $chord (@chords) {
+        # Find any "Chord/bass-note" chords
         my @slash = split /\//, $chord;
+        # Get the notes of the chord
         my @notes = $cn->chord_with_octave($slash[0], $octave);
+        # If there is a bass note...
         if ($slash[1]) {
             my $bass = $slash[1];
             my $o = $octave;
+            # Does the bass note exist in the chord?
             my $i = first_index { /^$bass/ } @notes;
+            # If so, set the octave and splice-out the note
             if ($i >= 0) {
                 ($o = $notes[$i]) =~ s/^[A-G][#b]?(\d+)$/$1/;
                 splice @notes, $i, 1;
             }
-            unshift @notes, $slash[1] . ($o - 1);
+            # Add the bass note and octave to the chord notes
+            unshift @notes, $bass . ($o - 1);
         }
         @notes = midi_format(@notes);
         print "\t", ddc(\@notes);
