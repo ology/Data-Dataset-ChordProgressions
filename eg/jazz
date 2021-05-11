@@ -6,9 +6,9 @@ use Data::Dumper::Compact qw(ddc);
 use Data::Dataset::ChordProgressions;
 #use Music::Scales qw(get_scale_notes);
 
-my $n = shift || 4;
+my $n    = shift || 4;
 my $note = shift || 'C'; # TODO Transpose from C
-my $key = shift || ''; # major, minor or either
+my $key  = shift || ''; # major, minor or either
 
 my %data = Data::Dataset::ChordProgressions::as_hash();
 #warn(__PACKAGE__,' ',__LINE__," MARK: ",ddc($data{jazz}{$key})) if $key;
