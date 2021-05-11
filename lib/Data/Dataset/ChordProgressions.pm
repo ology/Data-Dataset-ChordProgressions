@@ -34,6 +34,9 @@ may not be meaningful...
 Each of these is a list of possible chord progressions by named chords
 and by Roman numeral notation.
 
+The named chords are meant to match the known chords of
+L<Music::Chord::Note> (listed in the source).
+
 =cut
 
 =head1 FUNCTIONS
