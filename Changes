@@ -1,7 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
-    - Fix a typo in the shared CSV.
+    - Fix typos in the shared CSV.
     - Remove the two instances of the "5 chord".
 
 0.0103 2021-05-11 06:05:39
