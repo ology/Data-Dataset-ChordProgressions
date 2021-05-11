@@ -1,36 +1,32 @@
 #!/usr/bin/env perl
 
 # Return random jazz progressions
+# XXX: A couple chords have a bV note in the base, which is not handled by this code yet...
 
 use strict;
 use warnings;
 
-use Data::Dumper::Compact qw(ddc);
 use Data::Dataset::ChordProgressions;
-#use Music::Scales qw(get_scale_notes);
+use Music::Scales qw(get_scale_notes);
 
-my $n    = shift || 4;
-my $note = shift || 'C'; # TODO Transpose from C
-my $key  = shift || ''; # major, minor or either
+my $n     = shift || 4;
+my $note  = shift || 'C'; # Transpose chords from C to this
+my $scale = shift || 'major'; # or minor
 
 my %data = Data::Dataset::ChordProgressions::as_hash();
-#warn(__PACKAGE__,' ',__LINE__," MARK: ",ddc($data{jazz}{$key})) if $key;
 
 my @pool;
-if ($key) {
-    for my $type (keys %{ $data{jazz}{$key} }) {
-        push @pool, @{ $data{jazz}{$key}{$type} };
-    }
+for my $type (keys %{ $data{jazz}{$scale} }) {
+    push @pool, @{ $data{jazz}{$scale}{$type} };
 }
-else {
-    for $key (qw(major minor)) {
-        for my $type (keys %{ $data{jazz}{$key} }) {
-            push @pool, @{ $data{jazz}{$key}{$type} };
-        }
-    }
-}
-#warn(__PACKAGE__,' ',__LINE__," MARK: ",ddc(\@pool));
+
+my %note_map;
+@note_map{ get_scale_notes('C', $scale) } = get_scale_notes($note, $scale);
+use Data::Dumper::Compact qw(ddc);
+warn(__PACKAGE__,' ',__LINE__," MARK: ",ddc(\%note_map));
 
 for my $i (1 .. $n) {
-    print "$i. ", ddc($pool[int rand @pool]);
+    my $chord = $pool[int rand @pool];
+    (my $named = $chord->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
+    print "$i. $chord->[0] => $named, $chord->[1]\n";
 }
