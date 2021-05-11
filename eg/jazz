@@ -24,6 +24,7 @@ my %note_map;
 
 for my $i (1 .. $n) {
     my $progression = $pool[int rand @pool];
+    # Transpose the chords
     (my $named = $progression->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
     print "$i. $named, $progression->[1]\n";
 }
