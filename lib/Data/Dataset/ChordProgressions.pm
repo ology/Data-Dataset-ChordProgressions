@@ -23,7 +23,7 @@ use File::ShareDir qw(dist_dir);
 =head1 DESCRIPTION
 
 C<Data::Dataset::ChordProgressions> provides access to hundreds of
-possible chord progressions.
+possible chord progressions in the keys of C<C major> and C<C minor>.
 
 =cut
 
