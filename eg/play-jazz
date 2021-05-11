@@ -53,10 +53,11 @@ for my $i (1 .. $n) {
             # If so, set the octave and splice-out the note
             if ($i >= 0) {
                 ($o = $notes[$i]) =~ s/^[A-G][#b]?(\d+)$/$1/;
+                $o--;
                 splice @notes, $i, 1;
             }
             # Add the bass note and octave to the chord notes
-            unshift @notes, $bass . ($o - 1);
+            unshift @notes, $bass . $o;
         }
         @notes = midi_format(@notes);
         print "\t", ddc(\@notes);
