@@ -51,12 +51,12 @@ for my $i (1 .. $n) {
                 my $bass = $slash[1];
                 my $o = $octave;
                 # Does the bass note exist in the chord?
-                my $i = first_index { /^$bass/ } @notes;
+                my $idx = first_index { /^$bass/ } @notes;
                 # If so, set the octave and splice-out the note
-                if ($i >= 0) {
+                if ($idx >= 0) {
                     ($o = $notes[$i]) =~ s/^[A-G][#b]?(\d+)$/$1/;
                     $o--;
-                    splice @notes, $i, 1;
+                    splice @notes, $idx, 1;
                 }
                 # Prepend the bass note and octave to the chord notes
                 unshift @notes, $bass . $o;
