@@ -18,6 +18,7 @@ use Music::Scales qw(get_scale_notes);
 my $n     = shift || 4;
 my $note  = shift || 'C'; # Transpose chords from C to this
 my $scale = shift || 'major'; # or minor
+my $reps  = shift || 2;
 
 my $octave = 4;
 
@@ -39,6 +40,7 @@ for my $i (1 .. $n) {
     (my $named = $progression->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
     print "$i. $named, $progression->[1]\n";
     my @chords = split /-/, $named;
+    for my $j (1 .. $reps) {
     for my $chord (@chords) {
         # Find any "Chord/bass-note" chords
         my @slash = split /\//, $chord;
@@ -60,8 +62,9 @@ for my $i (1 .. $n) {
             unshift @notes, $bass . $o;
         }
         @notes = midi_format(@notes);
-        print "\t", ddc(\@notes);
+#        print "\t", ddc(\@notes);
         $score->n('wn', @notes);
+    }
     }
 }
 
