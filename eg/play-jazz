@@ -8,9 +8,9 @@ use strict;
 use warnings;
 
 use Data::Dumper::Compact qw(ddc);
-use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(MIDI-Util);
 use Data::Dataset::ChordProgressions;
 use List::MoreUtils qw(first_index);
+use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(MIDI-Util);
 use MIDI::Util qw(setup_score midi_format);
 use Music::Chord::Note;
 use Music::Scales qw(get_scale_notes);
