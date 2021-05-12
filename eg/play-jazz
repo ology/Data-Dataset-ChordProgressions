@@ -41,30 +41,30 @@ for my $i (1 .. $n) {
     print "$i. $named, $progression->[1]\n";
     my @chords = split /-/, $named;
     for my $j (1 .. $reps) {
-    for my $chord (@chords) {
-        # Find any "Chord/bass-note" chords
-        my @slash = split /\//, $chord;
-        # Get the notes of the chord
-        my @notes = $cn->chord_with_octave($slash[0], $octave);
-        # If there is a bass note...
-        if ($slash[1]) {
-            my $bass = $slash[1];
-            my $o = $octave;
-            # Does the bass note exist in the chord?
-            my $i = first_index { /^$bass/ } @notes;
-            # If so, set the octave and splice-out the note
-            if ($i >= 0) {
-                ($o = $notes[$i]) =~ s/^[A-G][#b]?(\d+)$/$1/;
-                $o--;
-                splice @notes, $i, 1;
+        for my $chord (@chords) {
+            # Find any "Chord/bass-note" chords
+            my @slash = split /\//, $chord;
+            # Get the notes of the chord
+            my @notes = $cn->chord_with_octave($slash[0], $octave);
+            # If there is a bass note...
+            if ($slash[1]) {
+                my $bass = $slash[1];
+                my $o = $octave;
+                # Does the bass note exist in the chord?
+                my $i = first_index { /^$bass/ } @notes;
+                # If so, set the octave and splice-out the note
+                if ($i >= 0) {
+                    ($o = $notes[$i]) =~ s/^[A-G][#b]?(\d+)$/$1/;
+                    $o--;
+                    splice @notes, $i, 1;
+                }
+                # Prepend the bass note and octave to the chord notes
+                unshift @notes, $bass . $o;
             }
-            # Prepend the bass note and octave to the chord notes
-            unshift @notes, $bass . $o;
+            @notes = midi_format(@notes);
+#            print "\t", ddc(\@notes);
+            $score->n('wn', @notes);
         }
-        @notes = midi_format(@notes);
-#        print "\t", ddc(\@notes);
-        $score->n('wn', @notes);
-    }
     }
 }
 
