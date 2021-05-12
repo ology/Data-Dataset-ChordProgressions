@@ -18,7 +18,7 @@ use Music::Scales qw(get_scale_notes);
 my $n     = shift || 4;
 my $note  = shift || 'C'; # Transpose chords from C to this
 my $scale = shift || 'major'; # or minor
-my $reps  = shift || 2;
+my $reps  = shift || 1;
 
 my $octave = 4;
 
