@@ -16,7 +16,7 @@ use Music::Chord::Note;
 use Music::Scales qw(get_scale_notes);
 
 my $reps  = shift || 2;
-my $sects = shift || 'Avm-DcM-Evm-DcM'; # <note><verse|chorus><major|minor> v=verse, c=chorus, M=major, m=minor
+my $sects = shift || 'Amv-DMc-Emv-DMc'; # <note><major|minor><verse|chorus> v=verse, c=chorus, M=major, m=minor
 
 my @sections = split /-/, $sects;
 
@@ -36,7 +36,7 @@ my @minor_choruses = @{ $data{rock}{minor}{chorus} };
 
 for my $sect (@sections) {
     my ($note, $section, $scale, @pool);
-    if ($sect =~ /^([A-G][#b]?)(v|c)(M|m)$/) {
+    if ($sect =~ /^([A-G][#b]?)(M|m)(v|c)$/) {
         ($note, $section, $scale) = ($1, $2, $3);
         if ($scale eq 'M') {
             if ($section eq 'v') {
