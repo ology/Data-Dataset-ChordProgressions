@@ -2,6 +2,8 @@
 
 # Play a random rock progression!
 
+# Unfortunately, certain chords are unknown (e.g. 6sus4).
+
 use strict;
 use warnings;
 
