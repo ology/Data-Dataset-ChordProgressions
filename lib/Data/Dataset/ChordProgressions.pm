@@ -32,7 +32,7 @@ song position.  Take these types with a grain of salt.  They may or
 may not be meaningful...
 
 The named chords are meant to match the known chords of
-L<Music::Chord::Note> (listed in the source).
+L<Music::Chord::Note> (listed in the source of that module).
 
 There are a few odd chord "progressions" like
 C<"Eb7-Eb7-Eb7-Eb7","III-III-III-III">.  Strange...
