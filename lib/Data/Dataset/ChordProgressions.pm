@@ -31,11 +31,15 @@ Each of these is divided into a C<type> of progression, depending on
 song position.  Take these types with a grain of salt.  They may or
 may not be meaningful...
 
-Each of these is a list of possible chord progressions by named chords
-and by Roman numeral notation.
-
 The named chords are meant to match the known chords of
 L<Music::Chord::Note> (listed in the source).
+
+There are a few odd chord "progressions" like
+C<"Eb7-Eb7-Eb7-Eb7","III-III-III-III">.  Strange...
+
+Allow me to explain: I stumbled across this list, saved it on my
+harddrive for a long time, and then forgot where it came from!  Also
+the documentation in this list said nothing about who made it or how.
 
 =cut
 
