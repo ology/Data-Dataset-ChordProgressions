@@ -54,7 +54,7 @@ for my $i (1 .. $n) {
                 my $idx = first_index { /^$bass/ } @notes;
                 # If so, set the octave and splice-out the note
                 if ($idx >= 0) {
-                    ($o = $notes[$i]) =~ s/^[A-G][#b]?(\d+)$/$1/;
+                    ($o = $notes[$idx]) =~ s/^[A-G][#b]?(\d+)$/$1/;
                     $o--;
                     splice @notes, $idx, 1;
                 }
