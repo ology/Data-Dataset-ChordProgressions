@@ -1,6 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Improve eg/play-rock.
 
 0.0105 2021-05-12 23:18:13
     - Add the eg/play-rock MIDI program.
