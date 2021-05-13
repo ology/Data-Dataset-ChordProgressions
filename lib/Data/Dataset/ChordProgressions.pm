@@ -55,8 +55,10 @@ Return the data filename location.
 
 sub as_file {
     my $file = eval { dist_dir('Data-Dataset-ChordProgressions') . '/Chord-Progressions.csv' };
+
     $file = 'share/Chord-Progressions.csv'
         unless $file && -e $file;
+
     return $file;
 }
 
