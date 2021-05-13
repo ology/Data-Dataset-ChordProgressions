@@ -28,31 +28,25 @@ my $cn = Music::Chord::Note->new;
 
 my %data = Data::Dataset::ChordProgressions::as_hash();
 
-# Lists of rock > scale > type chord progressions
-my @major_verses   = @{ $data{rock}{major}{verse} };
-my @minor_verses   = @{ $data{rock}{minor}{verse} };
-my @major_choruses = @{ $data{rock}{major}{chorus} };
-my @minor_choruses = @{ $data{rock}{minor}{chorus} };
-
 for my $sect (@sections) {
     my ($note, $section, $scale, @pool);
     if ($sect =~ /^([A-G][#b]?)(M|m)(v|c)$/) {
         ($note, $section, $scale) = ($1, $2, $3);
         if ($scale eq 'M') {
             if ($section eq 'v') {
-                @pool = @major_verses;
+                @pool = @{ $data{rock}{major}{verse} };
             }
             else {
-                @pool = @major_choruses;
+                @pool = @{ $data{rock}{major}{chorus} };
             }
             $scale = 'major';
         }
         else {
             if ($section eq 'v') {
-                @pool = @minor_verses;
+                @pool = @{ $data{rock}{minor}{verse} };
             }
             else {
-                @pool = @minor_choruses;
+                @pool = @{ $data{rock}{minor}{chorus} };
             }
             $scale = 'minor';
         }
