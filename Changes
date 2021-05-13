@@ -1,6 +1,9 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Add the eg/play-rock MIDI program.
+
+0.0104 2021-05-11 13:24:47
     - Fix typos in the shared CSV.
     - Remove the two instances of the "5 chord".
     - Add the eg/play-jazz MIDI program.
