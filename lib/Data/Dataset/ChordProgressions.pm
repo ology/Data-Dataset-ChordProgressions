@@ -37,9 +37,9 @@ L<Music::Chord::Note> (listed in the source of that module).
 There are a few odd chord "progressions" like
 C<"Eb7-Eb7-Eb7-Eb7","III-III-III-III">.  Strange...
 
-I stumbled across this list, saved it on my harddrive for a long time,
-and then forgot where it came from!  Also the documentation in this
-list said nothing about who made it or how.
+I stumbled across this list, saved it on my hard-drive for a long
+time, and then forgot where it came from!  Also the documentation in
+this list said nothing about who made it or how.
 
 =cut
 
