@@ -7,7 +7,6 @@
 use strict;
 use warnings;
 
-use Data::Dumper::Compact qw(ddc);
 use Data::Dataset::ChordProgressions;
 use List::MoreUtils qw(first_index);
 use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(MIDI-Util);
@@ -82,7 +81,6 @@ for my $sect (@sections) {
                 unshift @notes, $bass . $o;
             }
             @notes = midi_format(@notes);
-#            print "\t", ddc(\@notes);
             $score->n('wn', @notes);
         }
     }
