@@ -57,7 +57,7 @@ for my $sect (@sections) {
     my $progression = $pool[int rand @pool];
     # Transpose the chords
     (my $named = $progression->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
-    print "$named, $progression->[1]\n";
+    print "$note $scale: $named, $progression->[1]\n";
     my @chords = split /-/, $named;
     for my $j (1 .. $reps) {
         for my $chord (@chords) {
