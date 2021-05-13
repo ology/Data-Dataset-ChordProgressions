@@ -1,6 +1,8 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+
+0.0106 2021-05-13 07:41:53
     - Improve eg/play-rock.
     - Improve documentation.
 
