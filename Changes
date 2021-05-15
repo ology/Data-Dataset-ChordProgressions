@@ -1,6 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Remove unused code from the eg/play-rock program.
 
 0.0107 2021-05-15 09:24:36
     - Fix an error in eg/play-rock.
