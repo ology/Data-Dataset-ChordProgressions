@@ -55,16 +55,17 @@ for my $sect (@sections) {
     @note_map{ get_scale_notes('C', $scale) } = get_scale_notes($note, $scale);
 
     my $progression = $pool[int rand @pool];
-    # Transpose the chords
+
     (my $named = $progression->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
+
     print "$note $scale: $named, $progression->[1]\n";
+
     my @chords = split /-/, $named;
+
     for my $j (1 .. $reps) {
         for my $chord (@chords) {
-            # Get the notes of the chord
             my @notes = $cn->chord_with_octave($chord, $octave);
             @notes = midi_format(@notes);
-#            print "\t", ddc(\@notes);
             $score->n('wn', @notes);
         }
     }
