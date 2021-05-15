@@ -1,7 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
-    - Improve eg/play-rock a bit.
+    - Fix an error in eg/play-rock.
 
 0.0106 2021-05-13 07:41:53
     - Improve eg/play-rock.
