@@ -30,7 +30,7 @@ my %data = Data::Dataset::ChordProgressions::as_hash();
 for my $sect (@sections) {
     my ($note, $section, $scale, @pool);
     if ($sect =~ /^([A-G][#b]?)(M|m)(v|c)$/) {
-        ($note, $section, $scale) = ($1, $2, $3);
+        ($note, $scale, $section) = ($1, $2, $3);
         if ($scale eq 'M') {
             if ($section eq 'v') {
                 @pool = @{ $data{rock}{major}{verse} };
