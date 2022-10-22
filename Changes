@@ -1,6 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Avoid implicit imports.
 
 0.0108 2021-05-15 09:41:31
     - Remove unused code from the eg/play-rock program.

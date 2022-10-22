@@ -2,12 +2,12 @@ package Data::Dataset::ChordProgressions;
 
 # ABSTRACT: Provide access to hundreds of possible chord progressions
 
-our $VERSION = '0.0108';
+our $VERSION = '0.0109';
 
 use strict;
 use warnings;
 
-use Text::CSV_XS;
+use Text::CSV_XS ();
 use File::ShareDir qw(dist_dir);
 
 =head1 SYNOPSIS
