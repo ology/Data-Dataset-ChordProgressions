@@ -10,18 +10,24 @@ use warnings;
 use Text::CSV_XS ();
 use File::ShareDir qw(dist_dir);
 use Music::Scales qw(get_scale_notes);
+use Exporter 'import';
+
+our @EXPORT = qw(
+    as_file
+    as_list
+    as_hash
+    transpose
+);
 
 =head1 SYNOPSIS
 
-  use Data::Dataset::ChordProgressions;
+  use Data::Dataset::ChordProgressions qw(as_file as_list as_hash transpose);
 
-  my $filename = Data::Dataset::ChordProgressions::as_file();
+  my $filename = as_file();
+  my @data = as_list();
+  my %data = as_hash();
 
-  my @data = Data::Dataset::ChordProgressions::as_list();
-
-  my %data = Data::Dataset::ChordProgressions::as_hash();
-
-  my $named = Data::Dataset::ChordProgressions::transpose(
+  my $named = transpose(
     'A', 'major', ['C-F-Am-F', 'I-IV-vi-IV']
   );
 
@@ -52,7 +58,7 @@ the original list said nothing about who made it or how.
 
 =head2 as_file
 
-  $filename = Data::Dataset::ChordProgressions::as_file();
+  $filename = as_file();
 
 Return the data filename location.
 
@@ -69,7 +75,7 @@ sub as_file {
 
 =head2 as_list
 
-  @data = Data::Dataset::ChordProgressions::as_list();
+  @data = as_list();
 
 Return the data as an array.
 
@@ -96,7 +102,7 @@ sub as_list {
 
 =head2 as_hash
 
-  %data = Data::Dataset::ChordProgressions::as_hash();
+  %data = as_hash();
 
 Return the data as a hash.
 
