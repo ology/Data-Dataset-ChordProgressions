@@ -151,7 +151,7 @@ sub transpose {
 
 1;
 
-=head2 SEE ALSO
+=head1 SEE ALSO
 
 The F<t/01-functions.t> and F<eg/*> files
 
