@@ -153,7 +153,7 @@ sub transpose {
 
 =head2 SEE ALSO
 
-The F<t/01-functions.t> file
+The F<t/01-functions.t> and F<eg/*> files
 
 L<Exporter>
 
