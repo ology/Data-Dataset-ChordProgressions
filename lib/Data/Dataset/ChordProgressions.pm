@@ -132,8 +132,8 @@ sub as_hash {
 Transpose a B<progression> in the key of C<C> to the given B<note> and
 B<scale>.
 
-The progression must be a string of hyphen-separated chord
-names. For example: C<'C-F-Am-F'>
+The progression must be a string of hyphen-separated chord names. For
+example: C<'C-F-Am-F'>
 
 =cut
 
