@@ -135,9 +135,10 @@ sub as_hash {
 Transpose a B<progression> in the key of C<C> to the given B<note> and
 B<scale>.
 
-The progression must be the array-reference value of
-C<$data{$style}{$scale}{$section}>, as given by the C<as_hash()>
-function, and having the form of, for example:
+The progression must either be a string of hyphen-separated chord
+names, or the array-reference value of C<$data{$style}{$scale}{$section}>,
+as given by the C<as_hash()> function, and having the form of, for
+example:
 
   [ 'C-F-Am-F', 'I-IV-vi-IV' ]
 
@@ -146,13 +147,15 @@ function, and having the form of, for example:
 sub transpose {
     my ($note, $scale, $progression) = @_;
 
+    my $prog = ref $progression ? $progression->[0] : $progression;
+
     my %note_map;
     @note_map{ get_scale_notes('C', $scale) } = get_scale_notes($note, $scale);
 
     # transpose the progression chords from C
-    (my $named = $progression->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
+    $prog =~ s/([A-G][#b]?)/$note_map{$1}/g;
 
-    return $named;
+    return $prog;
 }
 
 1;
