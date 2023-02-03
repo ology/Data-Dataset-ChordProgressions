@@ -1,6 +1,6 @@
 package Data::Dataset::ChordProgressions;
 
-# ABSTRACT: Provide access to hundreds of possible chord progressions
+# ABSTRACT: Provide access to hundreds of chord progressions
 
 our $VERSION = '0.0303';
 
@@ -27,14 +27,14 @@ our @EXPORT = qw(
   my @data = as_list();
   my %data = as_hash();
 
-  my $named = transpose('A', 'major', 'C-F-Am-F');
+  my $transposed = transpose('A', 'major', 'C-F-Am-F');
 
 =head1 DESCRIPTION
 
 C<Data::Dataset::ChordProgressions> provides access to hundreds of
-possible musical chord progressions in five genres: C<blues>,
-C<country>, C<jazz>, C<pop> and C<rock>.  Each has progressions in
-keys of C<C major> and C<C minor>.
+musical chord progressions in five genres: C<blues>, C<country>,
+C<jazz>, C<pop> and C<rock>.  Each has progressions in keys of
+C<C major> and C<C minor>.
 
 Each of these is divided into a named C<type> of progression. Take
 these types with a grain of salt. They may or may not be meaningful...
@@ -127,7 +127,7 @@ sub as_hash {
 
 =head2 transpose
 
-  $named = transpose($note, $scale, $progression);
+  $transposed = transpose($note, $scale, $progression);
 
 Transpose a B<progression> in the key of C<C> to the given B<note> and
 B<scale>.
