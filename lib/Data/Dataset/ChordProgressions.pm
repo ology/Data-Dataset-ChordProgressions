@@ -21,7 +21,7 @@ use Music::Scales qw(get_scale_notes);
 
   my %data = Data::Dataset::ChordProgressions::as_hash();
 
-  my $named = Data::Dataset::ChordProgressions::transpose('A', 'major', 'C-F-Am-F');
+  my $named = Data::Dataset::ChordProgressions::transpose('A', 'major', ['C-F-Am-F', 'I-IV-vi-IV']);
 
 =head1 DESCRIPTION
 
@@ -127,11 +127,11 @@ sub as_hash {
 Transpose a B<progression> in the key of C<C> to the given B<note> and
 B<scale>.
 
-The progression must be the value of
+The progression must be the array-reference value of
 C<$data{$style}{$scale}{$section}>, as given by the C<as_hash()>
 function, and having the form of, for example:
 
-  C-F-Am-F
+  [ 'C-F-Am-F', 'I-IV-vi-IV' ]
 
 =cut
 
