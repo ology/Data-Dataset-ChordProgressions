@@ -9,6 +9,7 @@ use warnings;
 
 use Text::CSV_XS ();
 use File::ShareDir qw(dist_dir);
+use Music::Scales qw(get_scale_notes);
 
 =head1 SYNOPSIS
 
@@ -115,6 +116,32 @@ sub as_hash {
     close $fh;
 
     return %data;
+}
+
+=head2 transpose
+
+  $named = transpose($note, $scale, $progression);
+
+Transpose a B<progression> to the given B<note> and B<scale>.
+
+The progression must be the value of
+C<$data{$style}{$scale}{$section}>, as given by the C<as_hash()>
+function, and having the form of, for example:
+
+  C-F-Am-F
+
+=cut
+
+sub transpose {
+    my ($note, $scale, $progression) = @_;
+
+    my %note_map;
+    @note_map{ get_scale_notes('C', $scale) } = get_scale_notes($note, $scale);
+
+    # transpose the progression chords from C
+    (my $named = $progression->[0]) =~ s/([A-G][#b]?)/$note_map{$1}/g;
+
+    return $named;
 }
 
 1;
