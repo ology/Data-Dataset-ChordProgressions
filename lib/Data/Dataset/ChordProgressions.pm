@@ -21,7 +21,9 @@ use Music::Scales qw(get_scale_notes);
 
   my %data = Data::Dataset::ChordProgressions::as_hash();
 
-  my $named = Data::Dataset::ChordProgressions::transpose('A', 'major', ['C-F-Am-F', 'I-IV-vi-IV']);
+  my $named = Data::Dataset::ChordProgressions::transpose(
+    'A', 'major', ['C-F-Am-F', 'I-IV-vi-IV']
+  );
 
 =head1 DESCRIPTION
 
