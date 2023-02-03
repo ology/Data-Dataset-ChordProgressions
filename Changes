@@ -2,6 +2,7 @@ Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
     - Improve the eg/play-rock program.
+    - Add the transpose() function.
 
 0.0109 2022-10-21 20:49:28
     - Avoid implicit imports.
