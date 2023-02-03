@@ -151,3 +151,15 @@ sub transpose {
 }
 
 1;
+
+=head2 SEE ALSO
+
+The F<t/01-functions.t> file
+
+L<Exporter>
+
+L<File::ShareDir>
+
+L<Music::Scales>
+
+L<Text::CSV_XS>
