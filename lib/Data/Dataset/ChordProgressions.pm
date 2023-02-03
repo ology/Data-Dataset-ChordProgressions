@@ -27,9 +27,7 @@ our @EXPORT = qw(
   my @data = as_list();
   my %data = as_hash();
 
-  my $named = transpose(
-    'A', 'major', ['C-F-Am-F', 'I-IV-vi-IV']
-  );
+  my $named = transpose('A', 'major', 'C-F-Am-F');
 
 =head1 DESCRIPTION
 
