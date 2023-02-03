@@ -1,6 +1,9 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Ok ok. Use Exporter. Sheesh!
+
+0.0201 2023-02-02 20:42:44
     - Improve the eg/* programs.
 
 0.0200 2023-02-02 20:30:08
