@@ -122,7 +122,8 @@ sub as_hash {
 
   $named = transpose($note, $scale, $progression);
 
-Transpose a B<progression> to the given B<note> and B<scale>.
+Transpose a B<progression> in the key of C<C> to the given B<note> and
+B<scale>.
 
 The progression must be the value of
 C<$data{$style}{$scale}{$section}>, as given by the C<as_hash()>
