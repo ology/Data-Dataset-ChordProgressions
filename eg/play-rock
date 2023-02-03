@@ -37,7 +37,7 @@ for my $sect (@sections) {
 
     my $progression = $pool[int rand @pool];
 
-    my $named = transpose($note, $scale, $progression);
+    my $named = transpose($note, $scale, $progression->[0]);
 
     print "$note $scale: $named, $progression->[1]\n";
 

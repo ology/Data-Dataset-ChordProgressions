@@ -33,7 +33,7 @@ my $cn = Music::Chord::Note->new;
 
 for my $i (1 .. $n) {
     my $progression = $pool[int rand @pool];
-    my $named = transpose($note, $scale, $progression);
+    my $named = transpose($note, $scale, $progression->[0]);
     print "$i. $named, $progression->[1]\n";
     my @chords = split /-/, $named;
     for my $j (1 .. $reps) {

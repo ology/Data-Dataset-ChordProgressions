@@ -21,6 +21,6 @@ my @pool = map { @{ $data{jazz}{$scale}{$_} } } keys %{ $data{jazz}{$scale} };
 
 for my $i (1 .. $n) {
     my $progression = $pool[int rand @pool];
-    my $named = transpose($note, $scale, $progression);
+    my $named = transpose($note, $scale, $progression->[0]);
     print "$i. $named, $progression->[1]\n";
 }
