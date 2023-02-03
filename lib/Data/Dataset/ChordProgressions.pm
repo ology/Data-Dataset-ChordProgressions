@@ -36,19 +36,18 @@ possible musical chord progressions in five genres: C<blues>,
 C<country>, C<jazz>, C<pop> and C<rock>.  Each has progressions in
 keys of C<C major> and C<C minor>.
 
-Each of these is divided into a C<type> of progression, depending on
-song position.  Take these types with a grain of salt.  They may or
-may not be meaningful...
+Each of these is divided into a named C<type> of progression. Take
+these types with a grain of salt. They may or may not be meaningful...
 
 The named chords are meant to match the known chords of
 L<Music::Chord::Note> (listed in the source of that module).
 
 There are a few odd chord "progressions" like
-C<"Eb7-Eb7-Eb7-Eb7","III-III-III-III">.  Strange...
+C<"Eb7-Eb7-Eb7-Eb7","III-III-III-III">. Strange...
 
 I stumbled across this list, saved it on my hard-drive for a long
 time, and then forgot where it came from!  Also the documentation in
-the original list said nothing about who made it or how.
+the original list said nothing about who made it or how. :\
 
 =cut
 
