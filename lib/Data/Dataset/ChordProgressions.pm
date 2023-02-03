@@ -57,7 +57,7 @@ the original list said nothing about who made it or how. :\
 
   $filename = as_file();
 
-Return the data filename location.
+Return the chord progression data filename location.
 
 =cut
 
@@ -74,7 +74,7 @@ sub as_file {
 
   @data = as_list();
 
-Return the data as an array.
+Return the chord progression data as an array.
 
 =cut
 
@@ -101,7 +101,7 @@ sub as_list {
 
   %data = as_hash();
 
-Return the data as a hash.
+Return the chord progression data as a hash.
 
 =cut
 
