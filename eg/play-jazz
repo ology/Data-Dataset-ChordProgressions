@@ -13,7 +13,6 @@ use List::MoreUtils qw(first_index);
 use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(MIDI-Util);
 use MIDI::Util qw(setup_score midi_format);
 use Music::Chord::Note;
-use Music::Scales qw(get_scale_notes);
 
 my $n     = shift || 4;
 my $note  = shift || 'C'; # Transpose chords from C to this
