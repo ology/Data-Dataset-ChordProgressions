@@ -12,7 +12,6 @@ use List::MoreUtils qw(first_index);
 use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(MIDI-Util);
 use MIDI::Util qw(setup_score midi_format);
 use Music::Chord::Note;
-use Music::Scales qw(get_scale_notes);
 
 my $reps  = shift || 2;
 my $sects = shift || 'Amv-DMc-Emv-DMc'; # <note><major|minor><verse|chorus>
