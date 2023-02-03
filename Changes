@@ -1,6 +1,7 @@
 Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
+    - Fix the transpose() progression logic.
 
 0.0300 2023-02-02 21:00:12
     - Ok ok. Use Exporter. Sheesh!
