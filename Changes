@@ -2,7 +2,6 @@ Revision history for Data-Dataset-ChordProgressions
 
 {{$NEXT}}
     - Improve the eg/* programs.
-    - Improve documentation.
 
 0.0200 2023-02-02 20:30:08
     - Add the transpose() function.
