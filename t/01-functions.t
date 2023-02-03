@@ -17,4 +17,7 @@ my %data = Data::Dataset::ChordProgressions::as_hash();
 ok keys(%data), 'as_hash has data';
 is_deeply $data{blues}{major}{'12 bar form'}[0], ['C7-C7-C7-C7','I-I-I-I'], 'as_hash';
 
+my $named = Data::Dataset::ChordProgressions::transpose('A', 'major', ['C-F-Am-F', 'I-IV-vi-IV']);
+is $named, 'A-D-F#m-D', 'transpose';
+
 done_testing();
