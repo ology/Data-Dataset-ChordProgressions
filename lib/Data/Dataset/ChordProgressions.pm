@@ -1,8 +1,8 @@
 package Data::Dataset::ChordProgressions;
 
-# ABSTRACT: Provide access to hundreds of chord progressions
+# ABSTRACT: DEPRECATED - Provide access to hundreds of chord progressions
 
-our $VERSION = '0.0303';
+our $VERSION = '0.0303_1';
 
 use strict;
 use warnings;
@@ -30,6 +30,10 @@ our @EXPORT = qw(
   my $transposed = transpose('A', 'major', 'C-F-Am-F');
 
 =head1 DESCRIPTION
+
+* This module has been deprecated in favor of
+L<Music::Dataset::ChordProgressions>, which can be found by simple
+searching.
 
 C<Data::Dataset::ChordProgressions> provides access to hundreds of
 musical chord progressions in five genres: C<blues>, C<country>,
