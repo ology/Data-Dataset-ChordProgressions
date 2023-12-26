@@ -1,4 +1,4 @@
-package Data::Dataset::ChordProgressions;
+package Music::Dataset::ChordProgressions;
 
 # ABSTRACT: DEPRECATED - Provide access to hundreds of chord progressions
 
@@ -21,7 +21,7 @@ our @EXPORT = qw(
 
 =head1 SYNOPSIS
 
-  use Data::Dataset::ChordProgressions qw(as_file as_list as_hash transpose);
+  use Music::Dataset::ChordProgressions qw(as_file as_list as_hash transpose);
 
   my $filename = as_file();
   my @data = as_list();
@@ -31,11 +31,7 @@ our @EXPORT = qw(
 
 =head1 DESCRIPTION
 
-* This module has been deprecated in favor of
-L<Music::Dataset::ChordProgressions>, which can be found by simple
-searching.
-
-C<Data::Dataset::ChordProgressions> provides access to hundreds of
+C<Music::Dataset::ChordProgressions> provides access to hundreds of
 musical chord progressions in five genres: C<blues>, C<country>,
 C<jazz>, C<pop> and C<rock>.  Each has progressions in keys of
 C<C major> and C<C minor>.
@@ -66,7 +62,7 @@ Return the chord progression data filename location.
 =cut
 
 sub as_file {
-    my $file = eval { dist_dir('Data-Dataset-ChordProgressions') . '/Chord-Progressions.csv' };
+    my $file = eval { dist_dir('Music-Dataset-ChordProgressions') . '/Chord-Progressions.csv' };
 
     $file = 'share/Chord-Progressions.csv'
         unless $file && -e $file;
