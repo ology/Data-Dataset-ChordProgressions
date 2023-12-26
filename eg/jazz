@@ -7,7 +7,7 @@
 use strict;
 use warnings;
 
-use Data::Dataset::ChordProgressions qw(as_hash transpose);
+use Music::Dataset::ChordProgressions qw(as_hash transpose);
 
 my $n     = shift || 4;
 my $note  = shift || 'C'; # Transpose chords from C to this
