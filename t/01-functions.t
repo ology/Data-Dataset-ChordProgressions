@@ -4,7 +4,7 @@ use warnings;
 
 use Test::More;
 
-use_ok 'Data::Dataset::ChordProgressions', qw(as_file as_list as_hash transpose);
+use_ok 'Music::Dataset::ChordProgressions', qw(as_file as_list as_hash transpose);
 
 my $file = as_file();
 ok -e $file, 'as_file';
