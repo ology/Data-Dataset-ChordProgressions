@@ -1,6 +1,6 @@
 package Music::Dataset::ChordProgressions;
 
-# ABSTRACT: DEPRECATED - Provide access to hundreds of chord progressions
+# ABSTRACT: Provide access to hundreds of chord progressions
 
 our $VERSION = '0.0303_1';
 
