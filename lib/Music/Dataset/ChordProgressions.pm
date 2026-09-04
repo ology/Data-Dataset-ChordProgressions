@@ -12,11 +12,14 @@ use File::ShareDir qw(dist_dir);
 use Music::Scales qw(get_scale_notes);
 use Exporter 'import';
 
+our $share_file = eval { dist_dir('Music-Dataset-ChordProgressions') . '/Chord-Progressions.csv' };
+
 our @EXPORT = qw(
     as_file
     as_list
     as_hash
     transpose
+    $share_file
 );
 
 =head1 SYNOPSIS
@@ -62,12 +65,9 @@ Return the chord progression data filename location.
 =cut
 
 sub as_file {
-    my $file = eval { dist_dir('Music-Dataset-ChordProgressions') . '/Chord-Progressions.csv' };
-
-    $file = 'share/Chord-Progressions.csv'
-        unless $file && -e $file;
-
-    return $file;
+    $share_file = 'share/Chord-Progressions.csv'
+        unless $share_file && -e $share_file;
+    return $share_file;
 }
 
 =head2 as_list
