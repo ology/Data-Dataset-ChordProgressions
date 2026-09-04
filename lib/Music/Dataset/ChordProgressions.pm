@@ -2,7 +2,7 @@ package Music::Dataset::ChordProgressions;
 
 # ABSTRACT: Provide access to hundreds of chord progressions
 
-our $VERSION = '0.0401';
+our $VERSION = '0.0500';
 
 use strict;
 use warnings;
