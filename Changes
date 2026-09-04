@@ -1,6 +1,8 @@
 Revision history for Music-Dataset-ChordProgressions
 
 {{$NEXT}}
+
+0.0500 2026-09-04 12:00:27
     - Lose local author lib line in eg/.
     - Fix share logic to allow setting it externally.
 
